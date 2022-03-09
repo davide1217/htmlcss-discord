@@ -1,0 +1,112 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* stuttura */
+header{
+  height: 10vh;
+  background-color: #3061E0;
+}
+
+.jumbotron{
+  height: 40vh;
+  background-color: #3061E0;
+  position: relative;
+}
+
+section{
+  height: 50vh;
+  position: relative;
+}
+
+main section:nth-of-type(even){
+  background-color: #F6F6F6;
+}
+
+main section:nth-last-child(2){
+  height: 100vh;
+}
+
+
+main section:last-child{
+  height: 35vh;
+  background-color: #23272A;
+}
+
+footer{
+  height: 15vh;
+  background-color: #23272A;
+  position: relative;
+}
+/* \struttura */
+
+
+/* utility */
+.container:not(.jumbotron .container){
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  background-color: green;
+}
+
+/* \utility */
+
+/* header */
+header .container{
+  height: 100%;
+}
+
+header .container *{
+  float: left;
+}
+
+span{
+  width: 20%;
+}
+
+.content li{
+ float: left;
+ margin: 0 10px;
+}
+
+header ul{
+  list-style: none;
+  width: 60%;
+}
+/* \header */
+
+
+/* jumbotron */
+.jumbotron .container{
+  height: 200px;
+  width: 60%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: aqua;
+}
+/* \jumbotron */
+
+
+/* main */
+main .container:not(section:last-child .container){
+  height: 300px;
+}
+
+main section:last-child .container{
+  height: 200px;
+}
+/* \main */
+
+
+/* footer */
+footer .container{
+height: 10vh;
+}
+
+/* \footer */
