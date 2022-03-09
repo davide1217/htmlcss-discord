@@ -19,6 +19,7 @@ header{
 section{
   height: 50vh;
   position: relative;
+  padding-top: ;
 }
 
 main section:nth-of-type(even){
@@ -45,12 +46,15 @@ footer{
 
 /* utility */
 .container:not(.jumbotron .container){
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 80%;
+  margin: 0 auto;
   background-color: green;
+}
+
+.clearfix::after{
+  content: "";
+  display: table;
+  clear: both;
 }
 
 /* \utility */
@@ -81,25 +85,38 @@ header ul{
 
 
 /* jumbotron */
+.jumbotron{
+  padding-top: 5vh;
+}
+
 .jumbotron .container{
-  height: 200px;
+  height: 30vh;
   width: 60%;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  margin: 0 auto;
   background-color: aqua;
 }
 /* \jumbotron */
 
 
 /* main */
-main .container:not(section:last-child .container){
-  height: 300px;
+section:not(section:last-child){
+  padding-top: 10vh;
+}
+
+section:last-child{
+  padding-top: 5vh;
+}
+
+main .container:not(section:last-child .container, section:nth-last-child(2) .container){
+  height: 30vh;
 }
 
 main section:last-child .container{
-  height: 200px;
+  height: 25vh;
+}
+
+section:nth-last-child(2) .container{
+  height: 80vh;
 }
 /* \main */
 
