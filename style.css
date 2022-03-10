@@ -4,126 +4,286 @@
   box-sizing: border-box;
 }
 
-/* stuttura */
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* structure */
 header{
   height: 10vh;
-  background-color: #3061E0;
+  background-color: #255EE9;
 }
 
 .jumbotron{
   height: 40vh;
-  background-color: #3061E0;
-  position: relative;
+  background-image: url(jumbo.png);
+  background-size: cover;
+  background-position: center;
 }
 
-section{
+main section{
   height: 50vh;
-  position: relative;
-  padding-top: ;
+}
+
+main section:last-child{
+  height: 100vh;
 }
 
 main section:nth-of-type(even){
   background-color: #F6F6F6;
 }
 
-main section:nth-last-child(2){
-  height: 100vh;
+.container{
+  width: 80%;
+  margin: 0 auto;
 }
 
+.jumbotron .container{
+  width: 50%;
+}
 
-main section:last-child{
-  height: 35vh;
-  background-color: #23272A;
+main .litle.container{
+  height: 40vh;
+  padding-top: 5vh;
+}
+
+main .litle.container > *{
+  width: 49%;
 }
 
 footer{
-  height: 15vh;
+  height: 50vh;
+  padding-top: 5vh;
+  color: white;
   background-color: #23272A;
-  position: relative;
 }
-/* \struttura */
+
+footer .container{
+  width: 70%;
+}
+/* \structure */
 
 
 /* utility */
-.container:not(.jumbotron .container){
-  width: 80%;
-  margin: 0 auto;
-  background-color: green;
-}
-
 .clearfix::after{
   content: "";
   display: table;
   clear: both;
 }
 
+.left{
+  float: left;
+  padding-left: 100px;
+}
+
+.right{
+  float: right;
+}
+
+a{
+  text-decoration: none;
+}
+
+.button.white{
+  color: #23272A;
+  background-color: white;
+}
+
+.button.dark{
+  color: white;
+  background-color: #23272A;
+}
+
+.button.blue{
+  color: white;
+  background-color: #8EA1E1;
+}
+
+.button:hover{
+color: aqua;
+}
+
+.little.button{
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: .8rem;
+}
+
+.big.button{
+  padding: 15px 20px;
+  border-radius: 25px;
+}
+
+p{
+  font-size: 0.95rem;
+  line-height: 25px;
+}
+
+img{
+  width: 100%;
+}
 /* \utility */
+
 
 /* header */
 header .container{
-  height: 100%;
+  line-height: 3vh;
+  padding-top: 2vh;
 }
 
 header .container *{
-  float: left;
+  display: inline-block;
 }
 
-span{
+.logo{
+  vertical-align: middle;
+}
+
+header aside{
   width: 20%;
 }
 
-.content li{
- float: left;
- margin: 0 10px;
+.menu{
+  width: 59%;
+  text-align: center;
 }
 
-header ul{
-  list-style: none;
-  width: 60%;
+.menu a{
+  padding: 0 20px;
+  color: white;
+  font-size: .8rem;
+}
+
+.log-in{
+  text-align: right;
 }
 /* \header */
 
 
 /* jumbotron */
-.jumbotron{
-  padding-top: 5vh;
+.jumbotron .container{
+  text-align: center;
+  color: white;
+  padding-top: 40px;
 }
 
-.jumbotron .container{
-  height: 30vh;
-  width: 60%;
-  margin: 0 auto;
-  background-color: aqua;
+.jumbotron h1{
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.jumbotron p{
+  margin-bottom: 30px;
+}
+
+.jumbotron span{
+  margin: 0 10px;
 }
 /* \jumbotron */
 
 
 /* main */
-section:not(section:last-child){
-  padding-top: 10vh;
+main .section-img{
+  width: 40%;
 }
 
-section:last-child{
-  padding-top: 5vh;
+main .section-p{
+  padding-left: 100px;
+  padding-top: 20px;
 }
 
-main .container:not(section:last-child .container, section:nth-last-child(2) .container){
-  height: 30vh;
+.section-p h2{
+  font-size: 2rem;
+  margin-bottom: 15px;
 }
 
-main section:last-child .container{
-  height: 25vh;
+.section-p > *{
+  width: 50%;
 }
 
-section:nth-last-child(2) .container{
-  height: 80vh;
+.big.container .section-p *{
+  width: 80%;
+  margin: 15px auto 0px;
+  text-align: center;
+  padding-right: 100px;
+}
+
+.big.container .section-img{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.download{
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#ready-to-go{
+  background-image: url(stars.svg);
+  background-size: cover;
+  background-position: center;
+  line-height: 10vh;
 }
 /* \main */
 
 
 /* footer */
-footer .container{
-height: 10vh;
+#faq .container{
+  width: 70%;
+}
+#social{
+  width: 20%;
 }
 
-/* \footer */
+#social h3{
+  font-size: 1.5rem;
+  color: #8EA1E1;
+}
+
+#languages{
+  padding: 15px 0;
+}
+
+#social img{
+  width: 20px;
+  height: 15px;
+}
+
+#list{
+  width: 79%;
+}
+#list ul{
+  list-style: none;
+}
+
+#list li{
+  padding: 5px 0;
+}
+
+#list li:first-child{
+  color: #8EA1E1;
+}
+
+#social, #main-footer .left{
+  padding: 0;
+}
+
+#main-footer .container{
+  border-top: 1px solid #8EA1E1;
+  line-height: 30px;
+  padding-top: 20px;
+}
+
+.sign-in{
+  line-height: 30px;
+}
+
+#main-footer .logo{
+  vertical-align: middle;
+}
+
+
+
+
